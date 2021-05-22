@@ -1,4 +1,4 @@
-package com.kaiserpudding.novel.worker.application.infrastructure
+package com.xiangronglin.novel.worker.application.infrastructure
 
 import org.apache.activemq.ActiveMQConnectionFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -28,7 +28,7 @@ class AmqConfigurator {
         connectionFactory.brokerURL = amqConfig.url
         connectionFactory.userName = amqConfig.username
         connectionFactory.password = amqConfig.password.value
-        connectionFactory.trustedPackages = listOf("com.kaiserpudding.novel")
+        connectionFactory.trustedPackages = listOf("com.xiangronglin.novel")
         return connectionFactory
     }
 

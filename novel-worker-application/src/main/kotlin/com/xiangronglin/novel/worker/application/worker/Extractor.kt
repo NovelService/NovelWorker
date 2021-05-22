@@ -1,6 +1,6 @@
-package com.kaiserpudding.novel.worker.application.worker
+package com.xiangronglin.novel.worker.application.worker
 
-import com.kaiserpudding.novelservice.worker.Downloader
+import com.xiangronglin.novelservice.worker.Downloader
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import org.jsoup.Jsoup

@@ -1,4 +1,4 @@
-package com.kaiserpudding.novel.worker.api
+package com.xiangronglin.novel.worker.api
 
 import java.io.Serializable
 

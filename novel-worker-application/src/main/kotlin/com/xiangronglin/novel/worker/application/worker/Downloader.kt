@@ -1,4 +1,4 @@
-package com.kaiserpudding.novelservice.worker
+package com.xiangronglin.novelservice.worker
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -1,4 +1,4 @@
-package com.kaiserpudding.novel.worker.application.worker
+package com.xiangronglin.novel.worker.application.worker
 /**
  * Information about downloaded chapter for toc use.
  *

@@ -1,10 +1,10 @@
-package com.kaiserpudding.novel.worker.application.worker
+package com.xiangronglin.novel.worker.application.worker
 
-import com.kaiserpudding.novel.worker.api.NovelConfigMessage
-import com.kaiserpudding.novel.worker.api.NovelResultMessage
-import com.kaiserpudding.novel.worker.api.NovelResultStatus
-import com.kaiserpudding.novel.worker.application.infrastructure.AmqConfigurator
-import com.kaiserpudding.novel.worker.application.infrastructure.FileManager
+import com.xiangronglin.novel.worker.api.NovelConfigMessage
+import com.xiangronglin.novel.worker.api.NovelResultMessage
+import com.xiangronglin.novel.worker.api.NovelResultStatus
+import com.xiangronglin.novel.worker.application.infrastructure.AmqConfigurator
+import com.xiangronglin.novel.worker.application.infrastructure.FileManager
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

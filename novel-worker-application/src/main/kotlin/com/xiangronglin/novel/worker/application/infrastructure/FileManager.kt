@@ -1,4 +1,4 @@
-package com.kaiserpudding.novel.worker.application.infrastructure
+package com.xiangronglin.novel.worker.application.infrastructure
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service

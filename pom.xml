@@ -6,7 +6,7 @@
 
     <packaging>pom</packaging>
 
-    <groupId>com.kaiserpudding</groupId>
+    <groupId>com.xiangronglin</groupId>
     <artifactId>novel-worker</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -20,10 +20,17 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
-        <sping.boot.version>2.4.5</sping.boot.version>
+
+        <spring.boot.version>2.4.5</spring.boot.version>
+
         <kotlin.version>1.4.32</kotlin.version>
         <coroutines.version>1.4.3</coroutines.version>
+
         <hoplite.version>1.4.0</hoplite.version>
+        <log4j.version>2.14.1</log4j.version>
+
+        <dependency.plugin.version>3.1.2</dependency.plugin.version>
+        <docker.plugin.version>0.35.0</docker.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -46,13 +53,13 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-activemq</artifactId>
-                <version>${sping.boot.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <version>${sping.boot.version}</version>
+                <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
 
@@ -82,6 +89,13 @@
                 <version>${hoplite.version}</version>
             </dependency>
 
+            <!--  Logging -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.14.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -99,7 +113,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${sping.boot.version}</version>
+                    <version>${spring.boot.version}</version>
                 </plugin>
 
                 <plugin>
@@ -131,13 +145,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>${dependency.plugin.version}</version>
                 </plugin>
 
                 <plugin>
                     <groupId>io.fabric8</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>0.35.0</version>
+                    <version>${docker.plugin.version}</version>
                 </plugin>
 
             </plugins>
@@ -167,18 +181,6 @@
                 <configuration>
                     <jvmTarget>11</jvmTarget>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.jetbrains.kotlin</groupId>
-                        <artifactId>kotlin-maven-allopen</artifactId>
-                        <version>${kotlin.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.jetbrains.kotlin</groupId>
-                        <artifactId>kotlin-maven-noarg</artifactId>
-                        <version>${kotlin.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
