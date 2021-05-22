@@ -13,7 +13,7 @@ class ConfigManager {
 
     companion object {
         const val NOVEL_CONFIG_FILE_KEY = "NOVEL_SERVICE_CONFIG_FILE"
-        private const val DEFAULT_NOVEL_CONFIG_FILE = "/config/novel-service-config.yml"
+        private const val DEFAULT_NOVEL_CONFIG_FILE = "/config/config.yml"
 
         private val LOG = LoggerFactory.getLogger(ConfigManager::class.java)
     }
