@@ -2,7 +2,6 @@ name: CI
 
 env:
   IMAGE_NAME: xiangronglin/novel-worker
-  IS_PUSH: ${{ github.event_name == 'push' }}
 
 on:
   pull_request:
@@ -37,7 +36,7 @@ jobs:
 
       - name: Upload docker image tar as artifact
         uses: actions/upload-artifact@v2
-        if: ${{ env.IS_PUSH }}
+        if: github.event_name == 'push'
         with:
           name: docker-image
           parth: docker
@@ -45,7 +44,7 @@ jobs:
 
   publish-docker:
     runs-on: ubuntu-latest
-    if: ${{ env.IS_PUSH }}
+    if: github.event_name == 'push'
     steps:
       - name: Download docker image tar from artifacts
         uses: actions/download-artifact@v2
