@@ -31,6 +31,10 @@ jobs:
 
       - run: mvn install
 
+      - name: Prepare for saving docker image
+        if: github.event_name == 'push'
+        run: mkdir docker
+
       - name: Save docker image as tar
         if: github.event_name == 'push'
         run: docker save ${{ env.IMAGE_NAME }} > docker/image.tar
