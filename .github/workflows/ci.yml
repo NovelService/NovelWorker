@@ -45,6 +45,7 @@ jobs:
 
   publish-docker:
     runs-on: ubuntu-latest
+    needs: build
     if: github.event_name == 'push'
     steps:
       - name: Download docker image tar from artifacts
