@@ -32,6 +32,7 @@ jobs:
       - run: mvn install
 
       - name: Save docker image as tar
+        if: github.event_name == 'push'
         run: docker save ${{ env.IMAGE_NAME }} > docker/image.tar
 
       - name: Upload docker image tar as artifact
