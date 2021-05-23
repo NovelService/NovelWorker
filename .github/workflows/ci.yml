@@ -37,7 +37,7 @@ jobs:
 
       - name: Upload docker image tar as artifact
         uses: actions/upload-artifact@v2
-        if: ${{ IS_PUSH }}
+        if: ${{ env.IS_PUSH }}
         with:
           name: docker-image
           parth: docker
@@ -45,7 +45,7 @@ jobs:
 
   publish-docker:
     runs-on: ubuntu-latest
-    if: ${{ IS_PUSH }}
+    if: ${{ env.IS_PUSH }}
     steps:
       - name: Download docker image tar from artifacts
         uses: actions/download-artifact@v2
