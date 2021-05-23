@@ -44,7 +44,7 @@ jobs:
         if: github.event_name == 'push'
         with:
           name: docker-image
-          parth: docker
+          path: docker
           retention-days: 1
 
   publish-docker:
