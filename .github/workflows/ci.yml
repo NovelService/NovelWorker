@@ -2,7 +2,7 @@ name: CI
 
 env:
   IMAGE_NAME: xiangronglin/novel-worker
-  IS_PUSH: ${{ github.event_name == push }}
+  IS_PUSH: ${{ github.event_name == 'push' }}
 
 on:
   pull_request:
