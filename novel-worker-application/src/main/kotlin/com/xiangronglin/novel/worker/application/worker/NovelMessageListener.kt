@@ -3,7 +3,7 @@ package com.xiangronglin.novel.worker.application.worker
 import com.xiangronglin.novel.worker.api.NovelConfigMessage
 import com.xiangronglin.novel.worker.api.NovelResultMessage
 import com.xiangronglin.novel.worker.api.NovelResultStatus
-import com.xiangronglin.novel.worker.application.infrastructure.AmqConfigurator
+import com.xiangronglin.novel.worker.api.Queue
 import com.xiangronglin.novel.worker.application.infrastructure.FileManager
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
@@ -30,7 +30,7 @@ class NovelMessageListener(
 
     private val extractor = Extractor()
 
-    @JmsListener(destination = AmqConfigurator.NOVEL_QUEUE)
+    @JmsListener(destination = Queue.NOVEL)
     fun processNovel(config: NovelConfigMessage) {
         LOG.info("Received novel job with config: '$config'")
 

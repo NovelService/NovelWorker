@@ -1,5 +1,6 @@
 package com.xiangronglin.novel.worker.application.infrastructure
 
+import com.xiangronglin.novel.worker.api.Queue
 import org.apache.activemq.ActiveMQConnectionFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
@@ -11,11 +12,6 @@ import org.springframework.jms.core.JmsTemplate
 @EnableJms
 @Configuration
 class AmqConfigurator {
-
-    companion object {
-        const val NOVEL_QUEUE = "novel"
-        const val NOVEL_RESULT_QUEUE = "novel.result"
-    }
 
     @Autowired
     private lateinit var configManager: ConfigManager
@@ -35,7 +31,7 @@ class AmqConfigurator {
     @Bean
     fun jmsTemplate(): JmsTemplate {
         val template = JmsTemplate(connectionFactory())
-        template.defaultDestinationName = NOVEL_RESULT_QUEUE
+        template.defaultDestinationName = Queue.NOVEL_RESULT
         return template
     }
 }
