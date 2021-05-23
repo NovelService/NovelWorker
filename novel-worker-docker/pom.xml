@@ -57,7 +57,7 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>${project.parent.name}</name>
+                            <name>xiangronglin/${project.parent.name}</name>
                         </image>
                     </images>
                 </configuration>
