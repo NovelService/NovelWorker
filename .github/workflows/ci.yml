@@ -68,3 +68,12 @@ jobs:
 
       - name: Docker push
         run: docker push ${{ env.IMAGE_NAME }}
+
+      - name: Trigger deploy
+        run: |
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.REPO_ACCESS_TOKEN }}" \
+            https://api.github.com/repos/NovelService/NovelDeployer/dispatches \
+            -d '{"event_type":"deploy"}'
