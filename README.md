@@ -1,7 +1,7 @@
 # Novel Worker
 
 [![CI](https://github.com/NovelService/NovelWorker/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/NovelService/NovelRest/actions/workflows/ci.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/xiangronglin/novel-worker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/xiangronglin/novel-worker)](https://hub.docker.com/repository/docker/xiangronglin/novel-worker)
 
 ## Description
 
