@@ -25,5 +25,5 @@ Run with the system property variables set to below values by passing in the VM 
 
 |key|value|description|
 |---|---|---|
-|NOVEL_SERVICE_CONFIG_FILE|<path-to-repo>/novel-worker-config.yml|Config file location|
+|NOVEL_SERVICE_CONFIG_FILE|\<path-to-repo\>/novel-worker-config.yml|Config file location|
 |NOVEL_FOLDER_KEY|Any valid folder path|A folder to save novels|
